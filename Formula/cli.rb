@@ -10,10 +10,10 @@ class Cli < Formula
     sha256 "cbf0c9074b87cadc65f8bc66fb6e655f423c036cb9c81eb37b00837a05689db2"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/liblaber/homebrew-liblab/releases/download/0.0.1-beta3/liblab-macos-arm64-cli.zip"
-    sha256 "42a55645a3d97c197d9e285b2b102b1ffbb4502f6c42fe9451268961dd7d464e"
+    sha256 "75b1fb913f1a3815b787fed56dfe91ab1734d26f63028985f302b44deac4fa22"
   elsif OS.linux?
     url "https://github.com/liblaber/homebrew-liblab/releases/download/0.0.1-beta3/liblab-linux-x64-cli.zip"
-    sha256 "4f09bf2628518698884a534aca71db7d2c5bc63318643c00e6616101a4d0c9b4"
+    sha256 "fb968ace4afb5623e6ffc76ec415c218b7f5d6230f3a8e9764516aff72dfed3f"
   end
 
   def install
