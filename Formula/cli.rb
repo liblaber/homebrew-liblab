@@ -1,6 +1,6 @@
 require 'formula'
 
-class Liblab < Formula
+class Cli < Formula
   desc "Liblab CLI - A CLI for generating SDKs (and docs) from API specs"
   homepage "https://liblab.com"
   version "0.0.1-beta4"
