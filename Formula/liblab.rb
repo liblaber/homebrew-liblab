@@ -19,7 +19,7 @@ class Liblab < Formula
   def install
     
     if OS.linux?
-      libexec.install Dir["linux-x64/*"]
+      libexec.install Dir["*/*"]
     else
       libexec.install Dir["*"]
     end
