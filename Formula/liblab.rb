@@ -26,7 +26,7 @@ class Liblab < Formula
       bin.install_symlink libexec/"liblab_macos_arm64" => "liblab"
     elsif OS.linux?
       chmod(0755, "#{libexec}/linux-x64/liblab_linux_amd64")
-      bin.install_symlink libexec/linux-x64/"liblab_linux_amd64" => "liblab"
+      bin.install_symlink "libexec/linux-x64/liblab_linux_amd64" => "liblab"
     end
   end
 
