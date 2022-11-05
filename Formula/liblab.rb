@@ -17,7 +17,13 @@ class Liblab < Formula
   end
 
   def install
-    libexec.install Dir["*"]
+    
+    if OS.linux?
+      libexec.install Dir["linux-x64"]
+    else
+      libexec.install Dir["*"]
+    end
+    
     if OS.mac? && Hardware::CPU.intel?
       chmod(0755, "#{libexec}/liblab_macos_amd64")
       bin.install_symlink libexec/"liblab_macos_amd64" => "liblab"
@@ -25,8 +31,8 @@ class Liblab < Formula
       chmod(0755, "#{libexec}/liblab_macos_arm64")
       bin.install_symlink libexec/"liblab_macos_arm64" => "liblab"
     elsif OS.linux?
-      chmod(0755, "#{libexec}/linux-x64/liblab_linux_amd64")
-      bin.install_symlink "libexec/linux-x64/liblab_linux_amd64" => "liblab"
+      chmod(0755, "#{libexec}/liblab_linux_amd64")
+      bin.install_symlink "libexec/liblab_linux_amd64" => "liblab"
     end
   end
 
