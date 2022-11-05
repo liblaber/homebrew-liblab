@@ -18,11 +18,7 @@ class Liblab < Formula
 
   def install
     
-    if OS.linux?
-      libexec.install Dir["*/*"]
-    else
-      libexec.install Dir["*"]
-    end
+    libexec.install Dir["*"]
     
     if OS.mac? && Hardware::CPU.intel?
       chmod(0755, "#{libexec}/liblab_macos_amd64")
