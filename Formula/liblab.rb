@@ -3,17 +3,17 @@ require 'formula'
 class Liblab < Formula
   desc "Liblab CLI - A CLI for generating SDKs (and docs) from API specs"
   homepage "https://liblab.com"
-  version "0.0.1-beta4"
+  version "0.0.1-beta5"
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-macos-amd64-cli.zip"
-    sha256 "bde402a5b75809c5d87c8d2ac5ce730d34eb422d258005072ada9b4681602fbf"
+    sha256 "8ace28ac865672498e78f31275671edb423a70238b6aeb5d8cabe2638d89fdbe"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-macos-arm64-cli.zip"
-    sha256 "50c699456a84558a8c04bd151a39952e50425cfd401e38738ee777542f15e2e0"
+    sha256 "59cb877567ee9c987c652b93f973f95fb751baa6ce6dcc8822fbea2429ad0ef7"
   elsif OS.linux?
     url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-linux-x64-cli.zip"
-    sha256 "1cf24a5440dc1481194e688b858a48b94b74644472784f3a513ef4c7336de779"
+    sha256 "674113911332b471d3029059fa92be7325002984ca5837764a2b435a7a94c979"
   end
 
   def install
