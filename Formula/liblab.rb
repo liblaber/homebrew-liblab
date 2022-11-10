@@ -7,13 +7,13 @@ class Liblab < Formula
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-macos-amd64-cli.zip"
-    sha256 "37014fef4b9206b6b95bfdca63fde0f3bcae455c5f752a670ca1e00ed06399c8"
+    sha256 "1704461c60e6276a9827b4a0a992613a77e79f4f3a742bc2cde4f4d232c021ae"
   elsif OS.mac? && Hardware::CPU.arm?
     url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-macos-arm64-cli.zip"
-    sha256 "25d04906cdff7900e40082773658f72075975c0439aab32a092dac049d6b9fa6"
+    sha256 "f4a3c6cef25300cd1f3db90753be0400dff84664a25160de78f3f700fab280f1"
   elsif OS.linux?
     url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-linux-x64-cli.zip"
-    sha256 "741c2d37cff50d5d45a0ef29ca2cfd78e0a75584ed64d80571f4fe3d60293246"
+    sha256 "2d9ec27c139bd2a3c1f53eeb60f2358b6902def949d759ff3c80c1220d9b386d"
   end
 
   def install
