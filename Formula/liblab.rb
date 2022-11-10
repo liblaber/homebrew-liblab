@@ -3,7 +3,7 @@ require 'formula'
 class Liblab < Formula
   desc "Liblab CLI - A CLI for generating SDKs (and docs) from API specs"
   homepage "https://liblab.com"
-  version "0.0.1-beta6"
+  version "0.0.1-beta7"
 
   if OS.mac? && Hardware::CPU.intel?
     url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-macos-amd64-cli.zip"
