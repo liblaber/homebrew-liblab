@@ -1,38 +1,28 @@
-require 'formula'
+require "language/node"
 
 class Liblab < Formula
   desc "Liblab CLI - A CLI for generating SDKs (and docs) from API specs"
   homepage "https://liblab.com"
-  version "0.0.1-beta8"
-
+  version "0.0.0"
   if OS.mac? && Hardware::CPU.intel?
-    url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-macos-amd64-cli.zip"
-    sha256 "97f1cdc3faa63beb893d8da8b97854033a00ccab35cf257f4a5a3805eacff945"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-darwin-x64.tar.gz"
+    sha256 "75482d6517921103dc930811e40fb6e6b6f6efed5e5990289a9f9352714c899c"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-macos-arm64-cli.zip"
-    sha256 "660244dabf4f4c6135218e33d8c793b5bf83dd2a3de6a910cee350fc2e57a9eb"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-darwin-arm64.tar.gz"
+    sha256 "78eb70b2022f119284f740e902fe880917e76cd7c9be1ed49ea10e90ac0cb605"
+  elsif OS.linux? && Hardware::CPU.arm?
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-linux-x64.tar.gz"
+    sha256 "4ea69b7aaa1571ad75ea94f8d665b520b1e06f6cb39eee272d5acf528210dec2"
   elsif OS.linux?
-    url "https://github.com/liblaber/homebrew-liblab/releases/download/#{version}/liblab-linux-x64-cli.zip"
-    sha256 "1546dfc868fa9293acae9fbfd1bc85d54b20f9bf2784e5858a4be62123d71443"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-darwin-x64.tar.gz"
+    sha256 "421e7c79653e6c1ef63c4b66ddf13362adb8197e18bee0f8d02dd92ac5bcc320"
   end
+  depends_on "node"
 
   def install
-    
+    inreplace "bin/liblab", /^CLIENT_HOME=/, "export LibLab_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
     libexec.install Dir["*"]
-    
-    if OS.mac? && Hardware::CPU.intel?
-      chmod(0755, "#{libexec}/liblab_macos_amd64")
-      bin.install_symlink libexec/"liblab_macos_amd64" => "liblab"
-    elsif OS.mac? && Hardware::CPU.arm?
-      chmod(0755, "#{libexec}/liblab_macos_arm64")
-      bin.install_symlink libexec/"liblab_macos_arm64" => "liblab"
-    elsif OS.linux?
-      chmod(0755, "#{libexec}/liblab_linux_amd64")
-      bin.install_symlink libexec/"liblab_linux_amd64" => "liblab"
-    end
+    bin.install_symlink libexec/"bin/liblab"
   end
 
-  test do
-    assert_equal "liblab-cli v0.0.1-beta8", shell_output("#{bin}/liblab version")
-  end
 end
