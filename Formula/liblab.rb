@@ -11,10 +11,10 @@ class Liblab < Formula
     url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-darwin-arm64.tar.gz"
     sha256 "78eb70b2022f119284f740e902fe880917e76cd7c9be1ed49ea10e90ac0cb605"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-linux-x64.tar.gz"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-linux-arm.tar.gz"
     sha256 "4ea69b7aaa1571ad75ea94f8d665b520b1e06f6cb39eee272d5acf528210dec2"
   elsif OS.linux?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-darwin-x64.tar.gz"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-linux-x64.tar.gz"
     sha256 "421e7c79653e6c1ef63c4b66ddf13362adb8197e18bee0f8d02dd92ac5bcc320"
   end
   depends_on "node"
