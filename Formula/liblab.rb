@@ -2,7 +2,7 @@ require "language/node"
 class Liblab < Formula
   desc "liblab CLI - A CLI for generating SDKs (and docs) from API specs"
   homepage "https://liblab.com"
-  version "0.0.0"
+  version "0.0.1"
   if OS.mac? && Hardware::CPU.intel?
     url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.35.1/8245273/liblab-v0.35.1-8245273-darwin-x64.tar.gz"
     sha256 "eb8cde94b9029e204692ba42a6cfa2c00b378daa4129cc82455f0000a02eb7f0"
@@ -17,7 +17,7 @@ class Liblab < Formula
     sha256 "04134398dde39051f8d043f3682756eebf52c9ba35d8539af42c6fad624fd5b7"
   end
   depends_on "node"
-  
+
   def install
     inreplace "bin/liblab", /^CLIENT_HOME=/, "export LibLab_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
     libexec.install Dir["*"]
