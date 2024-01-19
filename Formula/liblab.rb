@@ -1,24 +1,23 @@
 require "language/node"
-
 class Liblab < Formula
-  desc "Liblab CLI - A CLI for generating SDKs (and docs) from API specs"
+  desc "liblab CLI - A CLI for generating SDKs (and docs) from API specs"
   homepage "https://liblab.com"
   version "0.0.0"
   if OS.mac? && Hardware::CPU.intel?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-darwin-x64.tar.gz"
-    sha256 "75482d6517921103dc930811e40fb6e6b6f6efed5e5990289a9f9352714c899c"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.35.1/8245273/liblab-v0.35.1-8245273-darwin-x64.tar.gz"
+    sha256 "eb8cde94b9029e204692ba42a6cfa2c00b378daa4129cc82455f0000a02eb7f0"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-darwin-arm64.tar.gz"
-    sha256 "78eb70b2022f119284f740e902fe880917e76cd7c9be1ed49ea10e90ac0cb605"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.35.1/8245273/liblab-v0.35.1-8245273-darwin-arm64.tar.gz"
+    sha256 "68cfe87db7ad009e813711991cae547b62905bacc08c8566e2efb0e698e7642a"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-linux-arm.tar.gz"
-    sha256 "4ea69b7aaa1571ad75ea94f8d665b520b1e06f6cb39eee272d5acf528210dec2"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.35.1/8245273/liblab-v0.35.1-8245273-linux-arm64.tar.gz"
+    sha256 "38974a9f39f279386dc86bfa63dea4541ec2a959cede8b863f95c8d78a5d9d55"
   elsif OS.linux?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/channels/stable/liblab-linux-x64.tar.gz"
-    sha256 "421e7c79653e6c1ef63c4b66ddf13362adb8197e18bee0f8d02dd92ac5bcc320"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.35.1/8245273/liblab-v0.35.1-8245273-linux-x64.tar.gz"
+    sha256 "04134398dde39051f8d043f3682756eebf52c9ba35d8539af42c6fad624fd5b7"
   end
   depends_on "node"
-
+  
   def install
     inreplace "bin/liblab", /^CLIENT_HOME=/, "export LibLab_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
     libexec.install Dir["*"]
