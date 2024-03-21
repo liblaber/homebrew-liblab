@@ -4,17 +4,17 @@ class Liblab < Formula
   homepage "https://liblab.com"
   version "0.38.7"
   if OS.mac? && Hardware::CPU.intel?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.38.7/f57d48b/liblab-v0.38.7-f57d48b-darwin-x64.tar.gz"
-    sha256 "6b9ab3b23e5a80ac3b6c6cb46f18f16b617f6161704d140e2737c83c35f1b710"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.38.7/d921ab3/liblab-v0.38.7-d921ab3-darwin-x64.tar.gz"
+    sha256 "e396a4c39c423f139e0f84a0e9ac328086bf1e1b7ce6ecc91e690c49b60fd336"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.38.7/f57d48b/liblab-v0.38.7-f57d48b-darwin-arm64.tar.gz"
-    sha256 "c40e8ffff9a640b3d8bdd9abfff780c18bc30ace4a7b3a0ced6e94b93f422202"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.38.7/d921ab3/liblab-v0.38.7-d921ab3-darwin-arm64.tar.gz"
+    sha256 "1d5b32aa8fb70277be3a3a456f9f990057a776f68c6621902c6085889ffa6255"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.38.7/f57d48b/liblab-v0.38.7-f57d48b-linux-arm64.tar.gz"
-    sha256 "37c9f7e067aa03cd70f5e4d6b77e53513ebc4fb00bdc0b605bb8f0bdd82b83a0"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.38.7/d921ab3/liblab-v0.38.7-d921ab3-linux-arm64.tar.gz"
+    sha256 "d46be6770b058fd16d3a14287a27675fad706a1759e859ebb6e70ba56a8620bb"
   elsif OS.linux?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.38.7/f57d48b/liblab-v0.38.7-f57d48b-linux-x64.tar.gz"
-    sha256 "9d953542e88b79f9f5fb068511fe7771669a4fa9aa384363a4b1fd61d7b69370"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.38.7/d921ab3/liblab-v0.38.7-d921ab3-linux-x64.tar.gz"
+    sha256 "97f4d1be171066672a6b528d00f893b720d055d3ee9ce4577be12b9819791160"
   end
   depends_on "node"
   def install
