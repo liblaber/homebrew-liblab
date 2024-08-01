@@ -2,19 +2,19 @@ require "language/node"
 class Liblab < Formula
   desc "liblab CLI - A CLI for generating SDKs (and docs) from API specs"
   homepage "https://liblab.com"
-  version "0.40.0"
+  version "0.40.2"
   if OS.mac? && Hardware::CPU.intel?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.40.0/91cf466/liblab-v0.40.0-91cf466-darwin-x64.tar.gz"
-    sha256 "73a9f80f3dc8a12db16a1ba40cc3115ea3884535103a6ebfaec49565e1260126"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.40.2/21f8000/liblab-v0.40.2-21f8000-darwin-x64.tar.gz"
+    sha256 "4e280f4e18f137b4fa20ace9a13f070c5a054d87fec659d9f3750bf6508a5690"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.40.0/91cf466/liblab-v0.40.0-91cf466-darwin-arm64.tar.gz"
-    sha256 "7f973c4e4f78428ca8e8ae06794766f0dd2b275bb13415c722231c350e6e7c97"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.40.2/21f8000/liblab-v0.40.2-21f8000-darwin-arm64.tar.gz"
+    sha256 "e64e3bcfaa6db23a1adfae751e5300564e8d534b9e6921cf339ab3aac6e5a580"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.40.0/91cf466/liblab-v0.40.0-91cf466-linux-arm64.tar.gz"
-    sha256 "13a0c8e82cf7e0e8aca104ede11c33466a364ed67a48ec94bd1f9d3c48357dc2"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.40.2/21f8000/liblab-v0.40.2-21f8000-linux-arm64.tar.gz"
+    sha256 "0058fd9cde4ea724efa64cb5ff0b4393845e15150d3c8cdd0a9e422e411faf76"
   elsif OS.linux?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.40.0/91cf466/liblab-v0.40.0-91cf466-linux-x64.tar.gz"
-    sha256 "32c809c6e52dcec305fa06bfbcf0f8cb1ab730dbfb382c5819b1a143a320815f"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.40.2/21f8000/liblab-v0.40.2-21f8000-linux-x64.tar.gz"
+    sha256 "c167c567913d18c73b9a797c0f12a667f9611a1d92f42938889d1fc9392318dc"
   end
   depends_on "node"
   def install
