@@ -4,17 +4,17 @@ class Liblab < Formula
   homepage "https://liblab.com"
   version "0.41.4"
   if OS.mac? && Hardware::CPU.intel?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.41.4/e3e5786/liblab-v0.41.4-e3e5786-darwin-x64.tar.gz"
-    sha256 "c5a356d0e07c67e67d522116037855b85cdecbb098743582b30c09867f64f1dc"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.41.4/2615881/liblab-v0.41.4-2615881-darwin-x64.tar.gz"
+    sha256 "3c3b57939ee54b5f9d14e82425388d14d30f8f87f3fca20e7ca2798d28d6830d"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.41.4/e3e5786/liblab-v0.41.4-e3e5786-darwin-arm64.tar.gz"
-    sha256 "d0630ad546b40ae36fedb5004bbf65eff7a8c218817b2b8c573cf8c054dc88cf"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.41.4/2615881/liblab-v0.41.4-2615881-darwin-arm64.tar.gz"
+    sha256 "54f8d78f1af50f465c051d5251ad4baa3f9a7949061b4c2f27671f9badf033fd"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.41.4/e3e5786/liblab-v0.41.4-e3e5786-linux-arm64.tar.gz"
-    sha256 "353348c3b42b4797ef7cf2cbdbf895d7e3910a09555e9dffaf74134321db7872"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.41.4/2615881/liblab-v0.41.4-2615881-linux-arm64.tar.gz"
+    sha256 "1508a5933d7fe32cb481c89c2b5d1e0893ce9b235cd24aee15291de97aa1fa70"
   elsif OS.linux?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.41.4/e3e5786/liblab-v0.41.4-e3e5786-linux-x64.tar.gz"
-    sha256 "590874b332c4548acfb0d842a9a0092d0ca7409ce83147d80fb04dceb3720b91"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.41.4/2615881/liblab-v0.41.4-2615881-linux-x64.tar.gz"
+    sha256 "7632d40cfa4991131e545b20c86088e3e64987198c63869f978ece7cb4adf5cf"
   end
   depends_on "node"
   def install
