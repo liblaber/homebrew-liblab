@@ -2,19 +2,19 @@ require "language/node"
 class Liblab < Formula
   desc "liblab CLI - A CLI for generating SDKs (and docs) from API specs"
   homepage "https://liblab.com"
-  version "0.49.31"
+  version "0.49.32"
   if OS.mac? && Hardware::CPU.intel?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.49.31/fbaef78/liblab-v0.49.31-fbaef78-darwin-x64.tar.gz"
-    sha256 "21cad399af352e63cdfb8df67005d2f876ca1348fc12e2c0561986a0eae6c44d"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.49.32/b0cb562/liblab-v0.49.32-b0cb562-darwin-x64.tar.gz"
+    sha256 "23901b86fd83a1c87173a9e79ee717e2527439dbfee8f73b17d7521c859b0003"
   elsif OS.mac? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.49.31/fbaef78/liblab-v0.49.31-fbaef78-darwin-arm64.tar.gz"
-    sha256 "c147c6df61f42d595585cff9905f052a5b0b5a90c98c37c88df358f77e0f36b9"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.49.32/b0cb562/liblab-v0.49.32-b0cb562-darwin-arm64.tar.gz"
+    sha256 "2d38fe5cd7f859587a5a6bd2385501b43c6f75d1408e86e15bc4b6ce81fc7ad1"
   elsif OS.linux? && Hardware::CPU.arm?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.49.31/fbaef78/liblab-v0.49.31-fbaef78-linux-arm.tar.gz"
-    sha256 "0adf4c16932c78af7a20c4848de046fbd67c514e708ed6c2353601d9c243c556"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.49.32/b0cb562/liblab-v0.49.32-b0cb562-linux-arm.tar.gz"
+    sha256 "9b7b02e89b2a23cb3062a1a1c467702fa787223a63c8bf6f6c85133e2e571a62"
   elsif OS.linux?
-    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.49.31/fbaef78/liblab-v0.49.31-fbaef78-linux-x64.tar.gz"
-    sha256 "d3d58a68bd602b86787c690a380d99d6fdde6442813a0160236440b6f10b766e"
+    url "https://dev-liblabl-cli-binaries.s3.amazonaws.com/versions/0.49.32/b0cb562/liblab-v0.49.32-b0cb562-linux-x64.tar.gz"
+    sha256 "2c5bc85f152713a82f715309a3282d4617f248564b66b4a986be1c8f31e749d5"
   end
   depends_on "node"
   def install
